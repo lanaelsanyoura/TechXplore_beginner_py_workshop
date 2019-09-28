@@ -42,15 +42,6 @@ theme_to_words = {"A": ["beach","sand", "swim", "sun", "waves", "tide",
                   "B": ["tower", "road", "sign", "light",
                         "show", "drink", "cup"]}
 
-answers_to_questions = [
-             {"A": {"What would you do first?": ["A. Hiking",
-                                                 "B. Swimming"]},
-             "B": {"What would you rather do":["A. Night out",
-                                               "B. Movie Night In"]}},
-             {"A": 3,
-              "B": 5}
-             ]
-
 PINK = "\033[95m"
 BLACK = '\033[30m'
 GREEN = '\033[32m'

@@ -127,7 +127,7 @@ while (game_state == True):
         # print(GREEN + "correct!" + BLACK) # TODO: uncomment this
 
         # Add the letter to the word we're building at the correct index
-        # HINT: you can get the index of a list element by: list.index(element)
+        # HINT: you can get the index of a list element by: string.index(element)
 
     # But if they lost, subtract one life
     #el..
@@ -144,4 +144,5 @@ while (game_state == True):
     #elif "".join(built_word) == target_word:
         #print(PINK + "You Won!" + BLACK)
         #print("The correct word is: ", target_word)
-        #TODO
+        #
+    game_state = False # TODO: this is just so we don't have an infinite loop
