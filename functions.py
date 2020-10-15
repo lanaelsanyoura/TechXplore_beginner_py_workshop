@@ -46,17 +46,17 @@ def to_list(string):
     return list_of_words
 
 
+if __name__ == '__main__':
+    a = 10
+    b = 2
+    # print the sum of these two variables
+    # sum = add(a,b)
+    # print(sum)
 
-a = 10
-b = 2
-# print the sum of these two variables
-# sum = add(a,b)
-# print(sum)
+    c = 2
+    d = 3
+    # print the sum as well
 
-c = 2
-d = 3
-# print the sum as well
+    # Call your function to_list with any sentence of your choice
 
-# Call your function to_list with any sentence of your choice
-
-# we can also do this with a built in string function: string.split()
+    # we can also do this with a built in string function: string.split()

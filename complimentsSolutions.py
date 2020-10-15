@@ -1,4 +1,5 @@
 import random
+
 all_compliments = []
 
 compliments_file = open("compliments.txt", "r")
@@ -20,6 +21,8 @@ def get_compliment(index):
         return
     return all_compliments[index]
 
-# Step 2: call your function
-comp2 = get_compliment(12)
-print(comp2)
+
+if __name__ == '__main__':
+    # Step 2: call your function
+    comp2 = get_compliment(12)
+    print(comp2)

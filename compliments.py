@@ -30,4 +30,6 @@ def get_compliment(index):
     return # TODO: specify what we're returning
 
 # Step 2: call your function
-# comp2 = get_compliment(12) #example function call:
+if __name__ == '__main__':
+    # comp2 = get_compliment(12) #example function call:
+    pass

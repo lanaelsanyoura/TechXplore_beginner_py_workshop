@@ -55,15 +55,15 @@ def to_list(string):
     return list_of_words
 
 
+if __name__ == '__main__':
+    a = 10
+    b = 2
+    # sum = add(a,b)
+    # print(sum)
 
-a = 10
-b = 2
-# sum = add(a,b)
-# print(sum)
+    # c = 2
+    # d = 3
+    # print(add(c,d))
+    print(to_list("Julia Ray")) # expectiing ["Julia", "Ray"]
 
-# c = 2
-# d = 3
-# print(add(c,d))
-print(to_list("Julia Ray")) # expectiing ["Julia", "Ray"]
-
-# we can also do this with a built in string function: string.split()
+    # we can also do this with a built in string function: string.split()

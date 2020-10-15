@@ -71,57 +71,59 @@ def choose_target_word():
 
     return word, lives
 
-# 1. Initialize game state to playing and parameters and blank target word
-game_state = True
-valid_letters = ["a", "b", "c", "d", "e",
-                 "f", "g", "h", "i", "j",
-                 "k", "l", "m", "n", "o",
-                 "p", "q", "r", "s", "t",
-                 "u", "v", "w", "x", "y",
-                 "z"]
-used_letters = []
-# 2. Choose the target word and lives
-target_word, lives = choose_target_word()
 
-# 3. Create a blank word for the user to update
-built_word = []
-for l in range(len(target_word)):
-    built_word.append(" * ")
-# 2. Keep asking for new letters until the word is correct
-# while(...)
-while (game_state):
-    # Print the status of the game
-    print("Letters left: ", valid_letters)
-    print("Letters used: ", used_letters)
-    print("lives: ", lives)
+if __name__ == '__main__':
+    # 1. Initialize game state to playing and parameters and blank target word
+    game_state = True
+    valid_letters = ["a", "b", "c", "d", "e",
+                     "f", "g", "h", "i", "j",
+                     "k", "l", "m", "n", "o",
+                     "p", "q", "r", "s", "t",
+                     "u", "v", "w", "x", "y",
+                     "z"]
+    used_letters = []
+    # 2. Choose the target word and lives
+    target_word, lives = choose_target_word()
 
-    print("".join(built_word))
-    # Ask the user for a letter
-    letter = input("Next letter? \n").lower() # make sure the letter is lower case
+    # 3. Create a blank word for the user to update
+    built_word = []
+    for l in range(len(target_word)):
+        built_word.append(" * ")
+    # 2. Keep asking for new letters until the word is correct
+    # while(...)
+    while (game_state):
+        # Print the status of the game
+        print("Letters left: ", valid_letters)
+        print("Letters used: ", used_letters)
+        print("lives: ", lives)
 
-    # Remove the letter from the valid alphabet:
-    if letter in valid_letters:
-        valid_letters.remove(letter)
-        used_letters.append(letter)
+        print("".join(built_word))
+        # Ask the user for a letter
+        letter = input("Next letter? \n").lower() # make sure the letter is lower case
 
-    # check if the letter is in the target word
-    if letter in target_word:
-        # Let the user know they're right
-        print(GREEN + "correct!" + BLACK)
+        # Remove the letter from the valid alphabet:
+        if letter in valid_letters:
+            valid_letters.remove(letter)
+            used_letters.append(letter)
 
-        # Add the letter to the word we're building
-        index = target_word.index(letter)
-        # Add colour to the correct letters: "\033[1;32;"
-        built_word[index] = letter
-    else:
-        # Subtract one life
-        lives = lives - 1
-        # Tell them they're incorrect
-        print(RED + "wrong!" + BLACK)
-    if lives == 0:
-        print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
-        game_state = False
-    elif "".join(built_word) == target_word:
-        print(PINK + "You Won!" + BLACK)
-        print("The correct word is: ", target_word)
-        game_state = False
+        # check if the letter is in the target word
+        if letter in target_word:
+            # Let the user know they're right
+            print(GREEN + "correct!" + BLACK)
+
+            # Add the letter to the word we're building
+            index = target_word.index(letter)
+            # Add colour to the correct letters: "\033[1;32;"
+            built_word[index] = letter
+        else:
+            # Subtract one life
+            lives = lives - 1
+            # Tell them they're incorrect
+            print(RED + "wrong!" + BLACK)
+        if lives == 0:
+            print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
+            game_state = False
+        elif "".join(built_word) == target_word:
+            print(PINK + "You Won!" + BLACK)
+            print("The correct word is: ", target_word)
+            game_state = False

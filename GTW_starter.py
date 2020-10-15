@@ -84,65 +84,67 @@ def choose_target_word():
     # return the target word and lives
     return "python", 3 #TODO: only for building purposes
 
-# 1. Initialize game state to playing and parameters and blank target word
-game_state = True
-valid_letters = ["a", "b", "c", "d", "e",
-                 "f", "g", "h", "i", "j",
-                 "k", "l", "m", "n", "o",
-                 "p", "q", "r", "s", "t",
-                 "u", "v", "w", "x", "y",
-                 "z"]
-used_letters = []
 
-# 2. Choose and set the target word and lives
-target_word, lives = "", 0 #TODO
+if __name__ == '__main__':
+    # 1. Initialize game state to playing and parameters and blank target word
+    game_state = True
+    valid_letters = ["a", "b", "c", "d", "e",
+                     "f", "g", "h", "i", "j",
+                     "k", "l", "m", "n", "o",
+                     "p", "q", "r", "s", "t",
+                     "u", "v", "w", "x", "y",
+                     "z"]
+    used_letters = []
 
-# 3. Create a blank word list for the user to update based on word length
-built_word = []
+    # 2. Choose and set the target word and lives
+    target_word, lives = "", 0 #TODO
 
-#TODO: set built_word
+    # 3. Create a blank word list for the user to update based on word length
+    built_word = []
 
-# 2. Keep asking for new letters until the word is correct
-# while(...)
-while (game_state == True):
-    # Print the status of the game
-    print("Letters left: ", valid_letters)
-    print("Letters used: ", used_letters)
-    print("lives: ", lives)
+    #TODO: set built_word
 
-    print("".join(built_word))
-    # Ask the user for a letter
-    letter = "" #TODO
+    # 2. Keep asking for new letters until the word is correct
+    # while(...)
+    while (game_state == True):
+        # Print the status of the game
+        print("Letters left: ", valid_letters)
+        print("Letters used: ", used_letters)
+        print("lives: ", lives)
 
-    # Remove the letter from the valid alphabet ONLY if it's there:
-    # Add the letter to the used
-    if letter in valid_letters:
+        print("".join(built_word))
+        # Ask the user for a letter
+        letter = "" #TODO
+
+        # Remove the letter from the valid alphabet ONLY if it's there:
+        # Add the letter to the used
+        if letter in valid_letters:
+            #TODO
+            pass
+
+        # check if the letter is in the target word
         #TODO
-        pass
+        # if ...
+            # Let the user know they're right
+            # print(GREEN + "correct!" + BLACK) # TODO: uncomment this
 
-    # check if the letter is in the target word
-    #TODO
-    # if ...
-        # Let the user know they're right
-        # print(GREEN + "correct!" + BLACK) # TODO: uncomment this
+            # Add the letter to the word we're building at the correct index
+            # HINT: you can get the index of a list element by: string.index(element)
 
-        # Add the letter to the word we're building at the correct index
-        # HINT: you can get the index of a list element by: string.index(element)
+        # But if they lost, subtract one life
+        #el..
+            # Subtract one life
+            #TODO:
+            # Tell them they're incorrect
+            # print(RED + "wrong!" + BLACK) #TODO: uncomment this
+        # If they've used all their lives, game over
+        # OR if they got all the letters correctly, they win!
 
-    # But if they lost, subtract one life
-    #el..
-        # Subtract one life
-        #TODO:
-        # Tell them they're incorrect
-        # print(RED + "wrong!" + BLACK) #TODO: uncomment this
-    # If they've used all their lives, game over
-    # OR if they got all the letters correctly, they win!
+        #if ...
+            #print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
 
-    #if ...
-        #print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
-
-    #elif "".join(built_word) == target_word:
-        #print(PINK + "You Won!" + BLACK)
-        #print("The correct word is: ", target_word)
-        #
-    game_state = False # TODO: this is just so we don't have an infinite loop
+        #elif "".join(built_word) == target_word:
+            #print(PINK + "You Won!" + BLACK)
+            #print("The correct word is: ", target_word)
+            #
+        game_state = False # TODO: this is just so we don't have an infinite loop
