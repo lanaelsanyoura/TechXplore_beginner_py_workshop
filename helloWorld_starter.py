@@ -1,7 +1,4 @@
 if __name__ == '__main__':
-    # Print Hello
-    print("Hello World")
-
     # Store the name of the user in a variable
 
     # print the name
@@ -36,21 +33,13 @@ if __name__ == '__main__':
     # if False:
     #    print("This will never print")
 
-    ## Booleans as a result of a comparison
-    # compare age to 18 (prints)
-
-    ## And we can store them in variables
-    # canVote = ...
-    # only print "Assessing variable canVote"
-    # if canVote is True
-
     # Sometimes we want a list of numbers or names
     # Let's create a workshop class list
     celebs = ["Drake", "Ariana Grande", "Bruno Mars"]
 
     # Print the number of elements in the list (len)
     # Get the first element
-    # Print all values in the list
+    # Print first value in the list
     # take a SLICE of the list, only show the middle two name
     # HINT: slice is a list: list[startIndex : endIndex] --> [...], not including end
 

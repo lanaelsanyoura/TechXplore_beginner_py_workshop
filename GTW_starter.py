@@ -66,23 +66,23 @@ def choose_target_word():
     """
 
     #1. Ask the user what them they are interested in
-    #theme = input(...)
+    # theme = ...
 
     # Get the word list based on these themes
-    #word_list = ...
+    # word_list = ...
 
     # Choose a random word from the list
     # HINT: random.choice(list) returns a random element
-    #word = ...
+    # word = ...
 
     # Ask them what activity they'd like to do
-    #activity = ...
+    # activity = ...
 
     # Update the lives accordin to their answer
-    #lives = ...
+    # lives = ...
 
     # return the target word and lives
-    return "python", 3 #TODO: only for building purposes
+    # return ...
 
 
 if __name__ == '__main__':
@@ -97,54 +97,55 @@ if __name__ == '__main__':
     used_letters = []
 
     # 2. Choose and set the target word and lives
-    target_word, lives = "", 0 #TODO
+    # target_word, lives = ...
 
     # 3. Create a blank word list for the user to update based on word length
     built_word = []
 
-    #TODO: set built_word
+    # set built_word with blank *
+    # for letter in ...
+
 
     # 2. Keep asking for new letters until the word is correct
-    # while(...)
     while (game_state == True):
         # Print the status of the game
         print("Letters left: ", valid_letters)
         print("Letters used: ", used_letters)
-        print("lives: ", lives)
+        # print("lives: ", lives)
 
         print("".join(built_word))
         # Ask the user for a letter
-        letter = "" #TODO
+        letter = input("Next letter?")
 
         # Remove the letter from the valid alphabet ONLY if it's there:
-        # Add the letter to the used
+        # HINT: valid_letters.remove(args) removes the letter from a list
+        # Add the letter to the used_letters
         if letter in valid_letters:
-            #TODO
-            pass
+            # remove letter from valid_letters
+            # add letter to used_letters
 
         # check if the letter is in the target word
-        #TODO
-        # if ...
+        if letter in target_word:
             # Let the user know they're right
-            # print(GREEN + "correct!" + BLACK) # TODO: uncomment this
+            print(GREEN + "correct!" + BLACK)
 
             # Add the letter to the word we're building at the correct index
-            # HINT: you can get the index of a list element by: string.index(element)
+            # HINT: you can get the index of a list element by: target_word.index(element)
 
         # But if they lost, subtract one life
-        #el..
+        else:
             # Subtract one life
-            #TODO:
             # Tell them they're incorrect
-            # print(RED + "wrong!" + BLACK) #TODO: uncomment this
+            print(RED + "wrong!" + BLACK)
+
         # If they've used all their lives, game over
         # OR if they got all the letters correctly, they win!
 
-        #if ...
-            #print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
+        # if lives ...
+            print(RED + "Game Over," + BLACK  + "the correct word is: ", target_word)
+            game_state = False
 
-        #elif "".join(built_word) == target_word:
-            #print(PINK + "You Won!" + BLACK)
-            #print("The correct word is: ", target_word)
-            #
-        game_state = False # TODO: this is just so we don't have an infinite loop
+        # elif "".join(built_word) == target_word:
+            print(PINK + "You Won!" + BLACK)
+            print("The correct word is: ", target_word)
+            game_state = True

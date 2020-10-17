@@ -37,7 +37,7 @@ def to_list(string):
     end_index = 0
     list_of_words = []
     # 2. loop through every letter by index in this string
-    # for ...
+    # for i in range(len(string)):
         # if you find a space: this word is ending
             # next word starts after the space
             # add this word to the list based on the string slice

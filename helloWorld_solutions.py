@@ -1,6 +1,4 @@
 if __name__ == '__main__':
-    # Print Hello
-    print("Hello World")
 
     # Store the name of the user in a variable
     name = "Lana"
@@ -39,20 +37,10 @@ if __name__ == '__main__':
     #     print("One more year till you can vote!")
 
     # If Statements with Booleans
-    if True:
-        print("If statement passes")
-    if False:
-        print("This will never print")
-
-    ## Booleans as a result of a comparison
-    #print(age > 18)
-    #print(age < 18)
-    ## And we can store them in variables
-    canVote = age >= 18
-    print(canVote)
-
-    if canVote:
-        print("Assessing variable canVote")
+    # if True:
+    #     print("If statement passes")
+    # if False:
+    #     print("This will never print")
 
     # Sometimes we want a list of numbers or names
     # Let's create a workshop class list

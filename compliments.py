@@ -1,7 +1,7 @@
 import random
 
 # open the file "compliments.txt" in READ (r) mode
-# compliments_file = ...
+# compliments_file = open(...)
 
 all_compliments = []
 
@@ -9,7 +9,7 @@ all_compliments = []
 # NOTES: str.strip(arg) removes any leading char
 # e.g. "HI   ".strip(" ") --> "HI"
 # We want to remove the new line characters, "\n"
-# for ...
+# for line in ...
 
 # Create a function that gives the user a compliment based on their number
 # of choice
